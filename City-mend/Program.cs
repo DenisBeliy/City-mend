@@ -6,7 +6,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 using City_mend.Create_game;
-
+using City_mend.Create_game;
 namespace City_mend
 {
     class Program
@@ -18,7 +18,13 @@ namespace City_mend
             Directory.CreateDirectory(@"C://Сохранения игры City-mend//" + "");
             Create_Files.Files();
             FullWindow();//открытие на весь экран
-            Login_to_game.Welcome();//при входе в игру
+                         //      Login_to_game.Welcome();//при входе в игру
+
+
+            Menu.Menu_create();
+
+
+
             Console.ReadLine();
         }
         

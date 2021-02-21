@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Create_Files.cs" />
     <Compile Include="Create_game\Login_to_game.cs" />
+    <Compile Include="Create_game\Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
