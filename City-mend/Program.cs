@@ -11,7 +11,7 @@ namespace City_mend
         static void Main(string[] args)
         {
 
-            Console.ReadLine();
+            
         }
     }
 }
