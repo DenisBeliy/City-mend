@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
+using City_mend;
 namespace City_mend.Create_game
 {
     class Menu
@@ -20,7 +20,7 @@ namespace City_mend.Create_game
         {
             string text = "";
             StreamReader menu_stream = new StreamReader("файлы для отрисовки\\Menu.txt");
-
+            Console.Clear();
             do
             {
                 text = menu_stream.ReadLine();
@@ -40,6 +40,14 @@ namespace City_mend.Create_game
                        Thread.Sleep(700);*/
                 if (consoleKeyInfo.Key == ConsoleKey.D1)
                 {
+                    DirectoryInfo dirInfo = new DirectoryInfo("C:\\Сохранения игры City-mend\\");
+
+                    foreach (FileInfo file in dirInfo.GetFiles())
+                    {
+                        file.Delete();
+                    }
+                    Create_Files.Files();
+                    //
                     break;
                 }
                 if (consoleKeyInfo.Key == ConsoleKey.D2)

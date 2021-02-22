@@ -20,8 +20,9 @@ namespace City_mend.Create_game
         private static void Files()
         {
             string text = "";
-            StreamReader logo_stream = new StreamReader("файлы для отрисовки\\logo.txt");
-        
+            StreamReader logo_stream = new StreamReader("D:\\игра City-mend\\City-mend\\City-mend\\Resources\\logo.txt");//!!!
+
+
             do
             {
                 text = logo_stream.ReadLine();
