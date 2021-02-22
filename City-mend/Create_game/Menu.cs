@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using City_mend;
+using City_mend.Create_game;
 namespace City_mend.Create_game
 {
     class Menu
@@ -52,7 +53,7 @@ namespace City_mend.Create_game
                 }
                 if (consoleKeyInfo.Key == ConsoleKey.D2)
                 {
-
+                    Create_LVL.Create_level();
                     break;
                 }
                 if (consoleKeyInfo.Key == ConsoleKey.D3)
