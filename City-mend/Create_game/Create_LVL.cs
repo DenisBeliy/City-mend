@@ -27,7 +27,6 @@ namespace City_mend.Create_game
         public static void Create_level()
         {
             LoadContent();
-           // residents = int.Parse(File.ReadAllText(@"C://Сохранения игры City-mend//" + "Save_residents.D&D").ToString());
             Draw();
         }
 
