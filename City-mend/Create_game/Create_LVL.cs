@@ -9,10 +9,10 @@ namespace City_mend.Create_game
     class Create_LVL
     {
         //поля
-        private static int village_level;
-        private static int residents;
-        private static int food;
-        private static float money;
+        public static int village_level;
+        public static int residents = 1;
+        public static int food;
+        public static float money;
         //конструктор
         public Create_LVL()
         {
@@ -27,42 +27,94 @@ namespace City_mend.Create_game
         public static void Create_level()
         {
             LoadContent();
+           // residents = int.Parse(File.ReadAllText(@"C://Сохранения игры City-mend//" + "Save_residents.D&D").ToString());
+            Draw();
         }
 
 
         private static void LoadContent()
         {
+            //residents
             try
             {
-
-                StreamReader village_reader = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_villageLevel.D&D");
-                village_level = int.Parse(village_reader.ReadToEnd());
-                village_reader.Close();
-
-                StreamReader residents_reader = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
-                residents = int.Parse(residents_reader.ReadToEnd());
-                residents_reader.Close();
-
-                StreamReader food_reader = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_food.D&D");
-                food = int.Parse(food_reader.ReadToEnd());
-                food_reader.Close();
-
-                StreamReader money_reader = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_food.D&D");
-                money = int.Parse(money_reader.ReadToEnd());
-                money_reader.Close();
+                residents = int.Parse(File.ReadAllText(@"C://Сохранения игры City-mend//" + "Save_residents.D&D").ToString());
             }
-            catch 
-            { 
-            village_level = 1;
-            residents = 0;
-            food = 100;
-            money = 100.423f;
+            catch
+            {
+
+                residents = 0;
             }
+
+            //village_level
+            try
+            {
+                village_level = int.Parse(File.ReadAllText(@"C://Сохранения игры City-mend//" + "Save_villageLevel.D&D").ToString());
+            }
+            catch
+            {
+
+                village_level = 0;
+            }
+
+            //food
+            try
+            {
+                food = int.Parse(File.ReadAllText(@"C://Сохранения игры City-mend//" + "Save_food.D&D").ToString());
+            }
+            catch
+            {
+
+                food = 100;
+            }
+
+
+            //money
+            try
+            {
+                money = float.Parse(File.ReadAllText(@"C://Сохранения игры City-mend//" + "Save_money.D&D").ToString());
+            }
+            catch
+            {
+
+                money = 100.423f;
+            }
+  
       /*      Console.WriteLine();
             Console.WriteLine(village_level);
             Console.WriteLine(residents);
             Console.WriteLine(food);
             Console.WriteLine(money);*/
+        }
+
+
+
+        private static void Draw()
+        {
+            Console.Clear();
+            string text;
+            StreamReader village_draw= new StreamReader("файлы для отрисовки\\деревни и города (отрисовка)\\деревня-1(lvl).txt");
+            
+            do
+            {
+                text = village_draw.ReadLine();
+                Console.WriteLine(text);
+            } while (text != null);
+            village_draw.Close();
+            
+                                            //показатели
+            StreamReader indicators_draw = new StreamReader("файлы для отрисовки\\показатели\\базовые показатели.txt");
+            Console.SetCursorPosition(125, 0);
+            int y = 0;
+            do
+            {
+               
+                text = indicators_draw.ReadLine();
+                Console.WriteLine(text);
+                Console.SetCursorPosition(135, y);
+                y++;
+            } while (text != null);
+            Console.SetCursorPosition(0,y-2);
+            indicators_draw.Close();
         }
     }
 }
