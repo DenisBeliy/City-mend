@@ -16,5 +16,18 @@ namespace City_mend.Forms
         {
             InitializeComponent();
         }
+
+        private void Residents_Load(object sender, EventArgs e)
+        {
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

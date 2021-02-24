@@ -68,6 +68,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\Residents.resx">
+      <DependentUpon>Residents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -117,6 +120,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\музыка\фон музыка%28меню%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backImage %281%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
