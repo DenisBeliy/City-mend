@@ -77,6 +77,7 @@ namespace City_mend.Forms
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(142, 470);
             this.button1.Name = "button1";
@@ -88,6 +89,7 @@ namespace City_mend.Forms
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DimGray;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(254, 470);
             this.button2.Name = "button2";
@@ -99,6 +101,7 @@ namespace City_mend.Forms
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Brown;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(366, 470);
             this.button3.Name = "button3";
@@ -110,6 +113,7 @@ namespace City_mend.Forms
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.RosyBrown;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(478, 470);
             this.button4.Name = "button4";
@@ -121,6 +125,7 @@ namespace City_mend.Forms
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.OrangeRed;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.Location = new System.Drawing.Point(590, 470);
             this.button5.Name = "button5";
@@ -132,6 +137,7 @@ namespace City_mend.Forms
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6.Location = new System.Drawing.Point(702, 470);
             this.button6.Name = "button6";
@@ -143,6 +149,7 @@ namespace City_mend.Forms
             // button7
             // 
             this.button7.BackColor = System.Drawing.Color.Bisque;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button7.Location = new System.Drawing.Point(814, 470);
             this.button7.Name = "button7";
@@ -154,6 +161,7 @@ namespace City_mend.Forms
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.SeaShell;
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button8.Location = new System.Drawing.Point(926, 470);
             this.button8.Name = "button8";
@@ -165,6 +173,7 @@ namespace City_mend.Forms
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button9.Location = new System.Drawing.Point(1038, 470);
             this.button9.Name = "button9";
