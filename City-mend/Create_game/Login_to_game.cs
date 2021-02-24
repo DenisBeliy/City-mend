@@ -18,36 +18,20 @@ namespace City_mend.Create_game
         }
 
         private static void Files()
-        {
-            string text = "";
-            StreamReader logo_stream = new StreamReader("D:\\игра City-mend\\City-mend\\City-mend\\Resources\\logo.txt");//!!!
+        {        
 
+            string logo_stream = Properties.Resources.logo;
+            Console.WriteLine(logo_stream);
 
-            do
-            {
-                text = logo_stream.ReadLine();
-                Console.WriteLine(text);
-            } while (text != null);
-            logo_stream.Close();
             Thread.Sleep(2000);
-            StreamReader present_stream = new StreamReader("файлы для отрисовки\\present.txt");
-           /* string present_text = "";*/
-            do
-            {
-                text = present_stream.ReadLine();
-                Console.WriteLine(text);
-            } while (text != null);
-            present_stream.Close();
+            string present_stream = Properties.Resources.present;
+            Console.WriteLine("     "+present_stream);
+
             Thread.Sleep(2000);
             Console.Clear();
-            StreamReader logoGame_stream = new StreamReader("файлы для отрисовки\\логотип игры\\вар5.txt");
-            /* string present_text = "";*/
-            do
-            {
-                text = logoGame_stream.ReadLine();
-                Console.WriteLine("                         "+text);
-            } while (text != null);
-            logoGame_stream.Close();
+            string logoGame_stream = Properties.Resources.вар5;
+            Console.WriteLine("             " + logoGame_stream);
+
         }
         private static void Music()
         {

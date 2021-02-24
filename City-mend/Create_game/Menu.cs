@@ -20,15 +20,10 @@ namespace City_mend.Create_game
 
         private static void Menu_print()
         {
-            string text = "";
-            StreamReader menu_stream = new StreamReader("файлы для отрисовки\\Menu.txt");
+           // Thread.Sleep(2000);
             Console.Clear();
-            do
-            {
-                text = menu_stream.ReadLine();
-                Console.WriteLine(text);
-            } while (text != null);
-            menu_stream.Close();
+            string menu_stream = Properties.Resources.Menu;
+            Console.WriteLine("     " + menu_stream);
         }
         private static void Choice()
         {

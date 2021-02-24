@@ -121,4 +121,43 @@
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
   </data>
+  <data name="Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\файлы для отрисовки\Menu.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="present" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\файлы для отрисовки\present.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="базовые_показатели" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\файлы для отрисовки\показатели\базовые показатели.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="базовые_показатели__город_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\файлы для отрисовки\показатели\базовые показатели (город).txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="вар5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\файлы для отрисовки\логотип игры\вар5.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="город_1_lvl_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\файлы для отрисовки\деревни и города (отрисовка)\город-1(lvl).txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="деревня_1_lvl_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\файлы для отрисовки\деревни и города (отрисовка)\деревня-1(lvl).txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="деревня_2_lvl_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\файлы для отрисовки\деревни и города (отрисовка)\деревня-2(lvl).txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="деревня_3_lvl_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\файлы для отрисовки\деревни и города (отрисовка)\деревня-3(lvl).txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="деревня_4_lvl_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\файлы для отрисовки\деревни и города (отрисовка)\деревня-4(lvl).txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="деревня_5_lvl_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\файлы для отрисовки\деревни и города (отрисовка)\деревня-5(lvl).txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="деревня_6_lvl_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\файлы для отрисовки\деревни и города (отрисовка)\деревня-6(lvl).txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
+  <data name="деревня_7_lvl_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\файлы для отрисовки\деревни и города (отрисовка)\деревня-7(lvl).txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
+  </data>
 </root>

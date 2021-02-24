@@ -90,30 +90,22 @@ namespace City_mend.Create_game
         private static void Draw()
         {
             Console.Clear();
-            string text;
-            StreamReader village_draw= new StreamReader("файлы для отрисовки\\деревни и города (отрисовка)\\деревня-1(lvl).txt");
-            
-            do
-            {
-                text = village_draw.ReadLine();
-                Console.WriteLine(text);
-            } while (text != null);
-            village_draw.Close();
-            
-                                            //показатели
-            StreamReader indicators_draw = new StreamReader("файлы для отрисовки\\показатели\\базовые показатели.txt");
+            //village
+            string village_draw = Properties.Resources.деревня_1_lvl_;//!
+            Console.WriteLine(village_draw);
+
+
+            //base_values
             Console.SetCursorPosition(125, 0);
-            int y = 0;
-            do
+            string[] base_values = Properties.Resources.базовые_показатели.Split('\n');
+            for (int i = 0; i < base_values.Length; i++)
             {
-               
-                text = indicators_draw.ReadLine();
-                Console.WriteLine(text);
-                Console.SetCursorPosition(135, y);
-                y++;
-            } while (text != null);
-            Console.SetCursorPosition(0,y-2);
-            indicators_draw.Close();
+                Console.Write(base_values[i]);
+                Console.SetCursorPosition(135, i);
+            }
+
+
+
         }
     }
 }

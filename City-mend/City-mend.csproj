@@ -68,5 +68,44 @@
   <ItemGroup>
     <None Include="Resources\logo.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\файлы для отрисовки\present.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\файлы для отрисовки\логотип игры\вар5.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\файлы для отрисовки\Menu.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\файлы для отрисовки\деревни и города %28отрисовка%29\город-1%28lvl%29.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\файлы для отрисовки\деревни и города %28отрисовка%29\деревня-1%28lvl%29.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\файлы для отрисовки\деревни и города %28отрисовка%29\деревня-2%28lvl%29.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\файлы для отрисовки\деревни и города %28отрисовка%29\деревня-3%28lvl%29.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\файлы для отрисовки\деревни и города %28отрисовка%29\деревня-4%28lvl%29.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\файлы для отрисовки\деревни и города %28отрисовка%29\деревня-5%28lvl%29.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\файлы для отрисовки\деревни и города %28отрисовка%29\деревня-6%28lvl%29.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\файлы для отрисовки\деревни и города %28отрисовка%29\деревня-7%28lvl%29.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\файлы для отрисовки\показатели\базовые показатели %28город%29.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\файлы для отрисовки\показатели\базовые показатели.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
