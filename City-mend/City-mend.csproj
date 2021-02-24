@@ -107,5 +107,8 @@
   <ItemGroup>
     <None Include="bin\Debug\файлы для отрисовки\показатели\базовые показатели.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\музыка\фон музыка%28меню%29.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

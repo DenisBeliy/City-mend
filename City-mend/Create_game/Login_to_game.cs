@@ -35,7 +35,7 @@ namespace City_mend.Create_game
         }
         private static void Music()
         {
-            SoundPlayer player = new SoundPlayer("музыка\\фон музыка(меню).wav");
+            SoundPlayer player = new SoundPlayer(City_mend.Properties.Resources.фон_музыка_меню_);
             player.PlayLooping();
         }
     }

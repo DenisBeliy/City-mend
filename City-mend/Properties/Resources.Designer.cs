@@ -270,5 +270,14 @@ namespace City_mend.Properties {
                 return ResourceManager.GetString("деревня_7_lvl_", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream фон_музыка_меню_ {
+            get {
+                return ResourceManager.GetStream("фон_музыка_меню_", resourceCulture);
+            }
+        }
     }
 }

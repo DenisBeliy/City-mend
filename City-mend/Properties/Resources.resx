@@ -160,4 +160,7 @@
   <data name="деревня_7_lvl_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\файлы для отрисовки\деревни и города (отрисовка)\деревня-7(lvl).txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
   </data>
+  <data name="фон_музыка_меню_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\музыка\фон музыка(меню).wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
