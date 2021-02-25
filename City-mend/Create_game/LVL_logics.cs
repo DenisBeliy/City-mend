@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using City_mend.Create_game;
+using City_mend.Forms;
+
 namespace City_mend.Create_game
 {
     class LVL_logics
@@ -12,6 +14,7 @@ namespace City_mend.Create_game
         {
             Draw();
             timerStart();
+            Update();
         }
 
         private static void Draw()
@@ -46,7 +49,7 @@ namespace City_mend.Create_game
             timer1.Elapsed += Timer1_Elapsed;
             timer1.Enabled = true;
             timer1.Start();
-            Choice();
+        
         }
 
         private static void Timer1_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
@@ -98,6 +101,22 @@ namespace City_mend.Create_game
 
                 } while (consoleKeyInfo.Key == ConsoleKey.D0);
                  
+            }
+        }
+
+        private static void Update()
+        {
+            ConsoleKeyInfo consoleKeyInfo;
+            while (true)
+            {
+                do
+                {
+                    consoleKeyInfo = Console.ReadKey(true);
+                    
+                } while (consoleKeyInfo.Key != ConsoleKey.R);
+                Residents frm = new Residents();
+                frm.ShowDialog();
+
             }
         }
     }
