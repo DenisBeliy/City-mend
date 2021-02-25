@@ -15,6 +15,7 @@ namespace City_mend
             Village();
             Food();
             Money();
+            Residents_dataGrid();
         }
 
         private static void Residents()
@@ -35,6 +36,11 @@ namespace City_mend
         private static void Money()
         {
             FileStream money_stream = new FileStream(@"C://Сохранения игры City-mend//" + "Save_money.D&D", FileMode.OpenOrCreate);
+            money_stream.Close();
+        }
+        private static void Residents_dataGrid()
+        {
+            FileStream money_stream = new FileStream(@"C://Сохранения игры City-mend//" + "Save_residents_dataGrid.D&D", FileMode.OpenOrCreate);
             money_stream.Close();
         }
     }

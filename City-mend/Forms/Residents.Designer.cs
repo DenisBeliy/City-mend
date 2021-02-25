@@ -32,7 +32,6 @@ namespace City_mend.Forms
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -44,6 +43,13 @@ namespace City_mend.Forms
             this.button9 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.timerMoney = new System.Windows.Forms.Timer(this.components);
+            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.specialty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.meaning_of_life = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.temperament = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endurance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,16 +69,17 @@ namespace City_mend.Forms
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
+            this.number,
+            this.name,
+            this.specialty,
+            this.meaning_of_life,
+            this.temperament,
+            this.endurance});
             this.dataGridView1.Location = new System.Drawing.Point(34, -3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1206, 467);
+            this.dataGridView1.Size = new System.Drawing.Size(1197, 467);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button1
             // 
@@ -198,6 +205,67 @@ namespace City_mend.Forms
             this.timerMoney.Interval = 1000;
             this.timerMoney.Tick += new System.EventHandler(this.timerMoney_Tick);
             // 
+            // number
+            // 
+            this.number.Frozen = true;
+            this.number.HeaderText = "Номер";
+            this.number.Name = "number";
+            this.number.ReadOnly = true;
+            this.number.Width = 104;
+            // 
+            // name
+            // 
+            this.name.Frozen = true;
+            this.name.HeaderText = "Имя";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 210;
+            // 
+            // specialty
+            // 
+            this.specialty.Frozen = true;
+            this.specialty.HeaderText = "Специальность";
+            this.specialty.Name = "specialty";
+            this.specialty.ReadOnly = true;
+            this.specialty.Width = 210;
+            // 
+            // meaning_of_life
+            // 
+            this.meaning_of_life.Frozen = true;
+            this.meaning_of_life.HeaderText = "Смысл жизни";
+            this.meaning_of_life.Name = "meaning_of_life";
+            this.meaning_of_life.ReadOnly = true;
+            this.meaning_of_life.Width = 210;
+            // 
+            // temperament
+            // 
+            this.temperament.Frozen = true;
+            this.temperament.HeaderText = "Темперамент";
+            this.temperament.Name = "temperament";
+            this.temperament.ReadOnly = true;
+            this.temperament.Width = 210;
+            // 
+            // endurance
+            // 
+            this.endurance.Frozen = true;
+            this.endurance.HeaderText = "Выносливость";
+            this.endurance.Name = "endurance";
+            this.endurance.ReadOnly = true;
+            this.endurance.Width = 210;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button10.Location = new System.Drawing.Point(1125, 575);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(106, 51);
+            this.button10.TabIndex = 13;
+            this.button10.Text = "test";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // Residents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +274,7 @@ namespace City_mend.Forms
             this.BackgroundImage = global::City_mend.Properties.Resources.backImage_;
             this.ClientSize = new System.Drawing.Size(1283, 668);
             this.ControlBox = false;
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
@@ -227,6 +296,7 @@ namespace City_mend.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Residents";
             this.TopMost = true;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Residents_FormClosed);
             this.Load += new System.EventHandler(this.Residents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -237,7 +307,6 @@ namespace City_mend.Forms
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -249,5 +318,12 @@ namespace City_mend.Forms
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timerMoney;
+        private System.Windows.Forms.DataGridViewTextBoxColumn number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specialty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn meaning_of_life;
+        private System.Windows.Forms.DataGridViewTextBoxColumn temperament;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endurance;
+        private System.Windows.Forms.Button button10;
     }
 }
