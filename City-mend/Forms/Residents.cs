@@ -67,6 +67,7 @@ namespace City_mend.Forms
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
 
             //загрузка данных в dataGrid
@@ -160,6 +161,81 @@ namespace City_mend.Forms
             }
             catch { MessageBox.Show("Ошибка при сохранении файла!"); }
 
+        }
+
+       private void button1_Leave(object sender, EventArgs e)
+        {
+            label3.Text = "";
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            label3.Text = "button1";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_MouseLeave(object sender, EventArgs e)
+        {
+            label3.Text = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            label3.Text = "button2";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_MouseHover(object sender, EventArgs e)
+        {
+            label3.Text = "button3";
+        }
+
+        private void button4_MouseHover(object sender, EventArgs e)
+        {
+            label3.Text = "button4";
+        }
+
+        private void button5_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_MouseHover(object sender, EventArgs e)
+        {
+            label3.Text = "button5";
+        }
+
+        private void button6_MouseHover(object sender, EventArgs e)
+        {
+            label3.Text = "button6";
+        }
+
+        private void button7_MouseHover(object sender, EventArgs e)
+        {
+            label3.Text = "button7";
+        }
+
+        private void button8_MouseHover(object sender, EventArgs e)
+        {
+            label3.Text = "button8";
+        }
+
+        private void button9_MouseHover(object sender, EventArgs e)
+        {
+            label3.Text = "button9";
         }
     }
 }
