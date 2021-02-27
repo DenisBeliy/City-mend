@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using City_mend.Create_game;
+using City_mend.Create_game;
+
 namespace City_mend.Forms
 {
     public partial class Residents : Form
@@ -17,6 +19,16 @@ namespace City_mend.Forms
         {
             InitializeComponent();
         }
+
+        public float price1 = 10.9f;
+        public float price2 = 10.7f;
+        public float price3 = 11.9f;
+        public float price4 = 10.0f;
+        public float price5 = 10.0f;
+        public float price6 = 10.5f;
+        public float price7 = 10.6f;
+        public float price8 = 10.4f;
+        public float price9 = 10.8f;
         enum Names
         {
             Август, Августин, Авраам, Аврора, Агата, Агафон, Агнесса,
@@ -97,6 +109,7 @@ namespace City_mend.Forms
         private void timerMoney_Tick(object sender, EventArgs e)
         {
             label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
+            label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -106,7 +119,7 @@ namespace City_mend.Forms
 
         private void button10_Click(object sender, EventArgs e)
         {
-            if (Create_LVL.money >= 100f)
+            if (Create_LVL.money >= 2)
             {
                 Create_LVL.money = Create_LVL.money - 1.623f;
                 int colIndex = 0; //индекс столбца
@@ -133,9 +146,20 @@ namespace City_mend.Forms
                     dataGridView1.Rows[i].Cells[colIndex].Value = i + 1;
 
                 }
+                int a = 0;
+                StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+
+                a = int.Parse(reader1.ReadLine());
+
+                reader1.Close();
+
+                StreamWriter writer1 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer1.Write(a + 1);
+                writer1.Close();
                 label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
             }
         }
+       
 
         private void Residents_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -170,13 +194,55 @@ namespace City_mend.Forms
 
         private void button1_MouseHover(object sender, EventArgs e)
         {
-            label3.Text = "button1";
+            label3.Text = "цена: " + price1;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (Create_LVL.money > 50)
+            {
 
-        }
+                Create_LVL.money = Create_LVL.money - price1;
+                Random random_name = new Random();
+                // Random random_profession = new Random();
+                Random random_temperament = new Random();
+                Random random_endurance = new Random();
+                Random random_meaning_of_life = new Random();
+
+
+                Names print_random_name = (Names)random_name.Next(0, 100);
+                Profession print_random_profession = Profession.Сталкер;
+                Temperament print_random_temperament = (Temperament)random_temperament.Next(0, 3);
+                Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
+
+                dataGridView1.Rows.Add("", print_random_name, print_random_profession,
+               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                int colIndex = 0;
+                for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+                {
+                    dataGridView1.Rows[i].Cells[colIndex].Value = i + 1;
+
+                }
+
+                int a = 0;
+                StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+
+                a = int.Parse( reader1.ReadLine());
+
+                reader1.Close();
+
+                StreamWriter writer1 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer1.Write(a + 1);
+                writer1.Close();
+
+                label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
+                label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
+            }
+            else
+            {
+                MessageBox.Show("У вас нет денег!", "Внимание.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            }
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
@@ -185,27 +251,112 @@ namespace City_mend.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (Create_LVL.money > 50)
+            {
+                
+                Create_LVL.money = Create_LVL.money - price2;
+                Random random_name = new Random();
+                // Random random_profession = new Random();
+                Random random_temperament = new Random();
+                Random random_endurance = new Random();
+                Random random_meaning_of_life = new Random();
 
+
+                Names print_random_name = (Names)random_name.Next(0, 100);
+                Profession print_random_profession = Profession.Охотник_за_головами;
+                Temperament print_random_temperament = (Temperament)random_temperament.Next(0, 3);
+                Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
+
+                dataGridView1.Rows.Add("", print_random_name, print_random_profession,
+               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                int colIndex = 0;
+                for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+                {
+                    dataGridView1.Rows[i].Cells[colIndex].Value = i + 1;
+
+                }
+
+                int a = 0;
+                StreamReader reader2 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+
+                a = int.Parse(reader2.ReadLine());
+
+                reader2.Close();
+
+                StreamWriter writer2 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer2.Write(a + 1);
+                writer2.Close();
+
+
+                label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
+                label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
+            }
+            else
+            {
+                MessageBox.Show("У вас нет денег!", "Внимание.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void button2_MouseHover(object sender, EventArgs e)
         {
-            label3.Text = "button2";
+            label3.Text = "цена: " + price2;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (Create_LVL.money > 50)
+            {
+                
+                Create_LVL.money = Create_LVL.money - price3;
+                Random random_name = new Random();
+                // Random random_profession = new Random();
+                Random random_temperament = new Random();
+                Random random_endurance = new Random();
+                Random random_meaning_of_life = new Random();
 
+
+                Names print_random_name = (Names)random_name.Next(0, 100);
+                Profession print_random_profession = Profession.Ученый;
+                Temperament print_random_temperament = (Temperament)random_temperament.Next(0, 3);
+                Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
+
+                dataGridView1.Rows.Add("", print_random_name, print_random_profession,
+               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                int colIndex = 0;
+                for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+                {
+                    dataGridView1.Rows[i].Cells[colIndex].Value = i + 1;
+
+                }
+
+                int a = 0;
+                StreamReader reader2 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+
+                a = int.Parse(reader2.ReadLine());
+
+                reader2.Close();
+
+                StreamWriter writer2 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer2.Write(a + 1);
+                writer2.Close();
+
+                label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
+                label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
+            }
+            else
+            {
+                MessageBox.Show("У вас нет денег!", "Внимание.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void button3_MouseHover(object sender, EventArgs e)
         {
-            label3.Text = "button3";
+            label3.Text = "цена: " + price3;
         }
 
         private void button4_MouseHover(object sender, EventArgs e)
         {
-            label3.Text = "button4";
+            label3.Text = "цена: " + price4;
         }
 
         private void button5_MouseEnter(object sender, EventArgs e)
@@ -215,27 +366,406 @@ namespace City_mend.Forms
 
         private void button5_MouseHover(object sender, EventArgs e)
         {
-            label3.Text = "button5";
+            label3.Text = "цена: " + price5;
         }
 
         private void button6_MouseHover(object sender, EventArgs e)
         {
-            label3.Text = "button6";
+            label3.Text = "цена: " + price6;
         }
 
         private void button7_MouseHover(object sender, EventArgs e)
         {
-            label3.Text = "button7";
+            label3.Text = "цена: " + price7;
         }
 
         private void button8_MouseHover(object sender, EventArgs e)
         {
-            label3.Text = "button8";
+            label3.Text = "цена: " + price8;
         }
 
         private void button9_MouseHover(object sender, EventArgs e)
         {
-            label3.Text = "button9";
+            label3.Text = "цена: " + price9;
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void информацияОКлассеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+           LVL_logics.timer1.Stop();
+           DialogResult result1 = MessageBox.Show("buton1", "     Сталкер", MessageBoxButtons.OK);
+            if (result1 == DialogResult.OK )
+            {
+                LVL_logics.timer1.Start();
+            }
+        }
+
+        private void информацияОКлассеToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            LVL_logics.timer1.Stop();
+            DialogResult result2 = MessageBox.Show("buton2", "     Охотник за головами", MessageBoxButtons.OK);
+            if (result2 == DialogResult.OK)
+            {
+                LVL_logics.timer1.Start();
+            }
+        }
+
+        private void информацияОКлассеToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            LVL_logics.timer1.Stop();
+            DialogResult result3 = MessageBox.Show("buton3", "     Ученый", MessageBoxButtons.OK);
+            if (result3 == DialogResult.OK)
+            {
+                LVL_logics.timer1.Start();
+            }
+        }
+
+        private void информацияОКлассеToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            LVL_logics.timer1.Stop();
+            DialogResult result3 = MessageBox.Show("buton4", "     Пастух", MessageBoxButtons.OK);
+            if (result3 == DialogResult.OK)
+            {
+                LVL_logics.timer1.Start();
+            }
+        }
+
+        private void информацияОКлассеToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            LVL_logics.timer1.Stop();
+            DialogResult result3 = MessageBox.Show("buton5", "     Каменщик", MessageBoxButtons.OK);
+            if (result3 == DialogResult.OK)
+            {
+                LVL_logics.timer1.Start();
+            }
+        }
+
+        private void contextMenuStrip6_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void информацияОКлассеToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            LVL_logics.timer1.Stop();
+            DialogResult result3 = MessageBox.Show("buton6", "     Кузнец", MessageBoxButtons.OK);
+            if (result3 == DialogResult.OK)
+            {
+                LVL_logics.timer1.Start();
+            }
+        }
+
+        private void информацияОКлассеToolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            LVL_logics.timer1.Stop();
+            DialogResult result3 = MessageBox.Show("buton7", "     Священник", MessageBoxButtons.OK);
+            if (result3 == DialogResult.OK)
+            {
+                LVL_logics.timer1.Start();
+            }
+        }
+
+        private void информацияОКлассеToolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            LVL_logics.timer1.Stop();
+            DialogResult result3 = MessageBox.Show("buton8", "     Монах", MessageBoxButtons.OK);
+            if (result3 == DialogResult.OK)
+            {
+                LVL_logics.timer1.Start();
+            }
+        }
+
+        private void информацияОКлассеToolStripMenuItem8_Click(object sender, EventArgs e)
+        {
+            LVL_logics.timer1.Stop();
+            DialogResult result3 = MessageBox.Show("buton9", "     Торговец", MessageBoxButtons.OK);
+            if (result3 == DialogResult.OK)
+            {
+                LVL_logics.timer1.Start();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (Create_LVL.money > 50)
+            {
+                
+                Create_LVL.money = Create_LVL.money -price4 ;
+                Random random_name = new Random();
+                // Random random_profession = new Random();
+                Random random_temperament = new Random();
+                Random random_endurance = new Random();
+                Random random_meaning_of_life = new Random();
+
+
+                Names print_random_name = (Names)random_name.Next(0, 100);
+                Profession print_random_profession = Profession.Пастух;
+                Temperament print_random_temperament = (Temperament)random_temperament.Next(0, 3);
+                Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
+
+                dataGridView1.Rows.Add("", print_random_name, print_random_profession,
+               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                int colIndex = 0;
+                for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+                {
+                    dataGridView1.Rows[i].Cells[colIndex].Value = i + 1;
+
+                }
+
+                int a = 0;
+                StreamReader reader2 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+
+                a = int.Parse(reader2.ReadLine());
+
+                reader2.Close();
+
+                StreamWriter writer2 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer2.Write(a + 1);
+                writer2.Close();
+
+                label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
+                label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
+            }
+            else
+            {
+                MessageBox.Show("У вас нет денег!", "Внимание.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (Create_LVL.money > 50)
+            {
+                
+                Create_LVL.money = Create_LVL.money - price5;
+                Random random_name = new Random();
+                // Random random_profession = new Random();
+                Random random_temperament = new Random();
+                Random random_endurance = new Random();
+                Random random_meaning_of_life = new Random();
+
+
+                Names print_random_name = (Names)random_name.Next(0, 100);
+                Profession print_random_profession = Profession.Каменщик;
+                Temperament print_random_temperament = (Temperament)random_temperament.Next(0, 3);
+                Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
+
+                dataGridView1.Rows.Add("", print_random_name, print_random_profession,
+               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                int colIndex = 0;
+                for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+                {
+                    dataGridView1.Rows[i].Cells[colIndex].Value = i + 1;
+
+                }
+
+                int a = 0;
+                StreamReader reader4 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+
+                a = int.Parse(reader4.ReadLine());
+
+                reader4.Close();
+
+                StreamWriter writer4 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer4.Write(a + 1);
+                writer4.Close();
+
+                label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
+                label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
+            }
+            else
+            {
+                MessageBox.Show("У вас нет денег!", "Внимание.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (Create_LVL.money > 50)
+            {
+                
+                Create_LVL.money = Create_LVL.money - price6;
+                Random random_name = new Random();
+                // Random random_profession = new Random();
+                Random random_temperament = new Random();
+                Random random_endurance = new Random();
+                Random random_meaning_of_life = new Random();
+
+
+                Names print_random_name = (Names)random_name.Next(0, 100);
+                Profession print_random_profession = Profession.Кузнец;
+                Temperament print_random_temperament = (Temperament)random_temperament.Next(0, 3);
+                Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
+
+                dataGridView1.Rows.Add("", print_random_name, print_random_profession,
+               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                int colIndex = 0;
+                for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+                {
+                    dataGridView1.Rows[i].Cells[colIndex].Value = i + 1;
+
+                }
+                int a = 0;
+                StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+
+                a = int.Parse(reader1.ReadLine());
+
+                reader1.Close();
+
+                StreamWriter writer1 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer1.Write(a + 1);
+                writer1.Close();
+
+                label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
+                label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
+            }
+            else
+            {
+                MessageBox.Show("У вас нет денег!", "Внимание.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (Create_LVL.money > 50)
+            {
+               
+                Create_LVL.money = Create_LVL.money - price7;
+                Random random_name = new Random();
+                // Random random_profession = new Random();
+                Random random_temperament = new Random();
+                Random random_endurance = new Random();
+                Random random_meaning_of_life = new Random();
+
+
+                Names print_random_name = (Names)random_name.Next(0, 100);
+                Profession print_random_profession = Profession.Священник;
+                Temperament print_random_temperament = (Temperament)random_temperament.Next(0, 3);
+                Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
+
+                dataGridView1.Rows.Add("", print_random_name, print_random_profession,
+               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                int colIndex = 0;
+                for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+                {
+                    dataGridView1.Rows[i].Cells[colIndex].Value = i + 1;
+
+                }
+                int a = 0;
+                StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+
+                a = int.Parse(reader1.ReadLine());
+
+                reader1.Close();
+
+                StreamWriter writer1 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer1.Write(a + 1);
+                writer1.Close();
+                label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
+                label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
+            }
+            else
+            {
+                MessageBox.Show("У вас нет денег!", "Внимание.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (Create_LVL.money > 50)
+            {
+                
+                Create_LVL.money = Create_LVL.money - price8;
+                Random random_name = new Random();
+                // Random random_profession = new Random();
+                Random random_temperament = new Random();
+                Random random_endurance = new Random();
+                Random random_meaning_of_life = new Random();
+
+
+                Names print_random_name = (Names)random_name.Next(0, 100);
+                Profession print_random_profession = Profession.Монах;
+                Temperament print_random_temperament = (Temperament)random_temperament.Next(0, 3);
+                Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
+
+                dataGridView1.Rows.Add("", print_random_name, print_random_profession,
+               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                int colIndex = 0;
+                for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+                {
+                    dataGridView1.Rows[i].Cells[colIndex].Value = i + 1;
+
+                }
+
+                int a = 0;
+                StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+
+                a = int.Parse(reader1.ReadLine());
+
+                reader1.Close();
+
+                StreamWriter writer1 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer1.Write(a + 1);
+                writer1.Close();
+                label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
+                label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
+            }
+            else
+            {
+                MessageBox.Show("У вас нет денег!", "Внимание.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (Create_LVL.money > 50)
+            {
+               
+                Create_LVL.money = Create_LVL.money - price9;
+                Random random_name = new Random();
+                // Random random_profession = new Random();
+                Random random_temperament = new Random();
+                Random random_endurance = new Random();
+                Random random_meaning_of_life = new Random();
+
+
+                Names print_random_name = (Names)random_name.Next(0, 100);
+                Profession print_random_profession = Profession.Торговец;
+                Temperament print_random_temperament = (Temperament)random_temperament.Next(0, 3);
+                Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
+
+                dataGridView1.Rows.Add("", print_random_name, print_random_profession,
+               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                int colIndex = 0;
+                for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+                {
+                    dataGridView1.Rows[i].Cells[colIndex].Value = i + 1;
+
+                }
+
+                int a = 0;
+                StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+
+                a = int.Parse(reader1.ReadLine());
+
+                reader1.Close();
+
+                StreamWriter writer1 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer1.Write(a + 1);
+                writer1.Close();
+                label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
+                label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
+            }
+            else
+            {
+                MessageBox.Show("У вас нет денег!", "Внимание.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
+
 }

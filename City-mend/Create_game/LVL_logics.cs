@@ -37,12 +37,13 @@ namespace City_mend.Create_game
             //money
 
             Console.SetCursorPosition(150, 25);
+            Create_LVL.money = (float)Math.Round(Create_LVL.money, 2);
             Console.WriteLine(Create_LVL.money.ToString());
 
             Console.SetCursorPosition(0, 37);
         }
 
-        static System.Timers.Timer timer1 = new System.Timers.Timer(1000);
+        public static System.Timers.Timer timer1 = new System.Timers.Timer(3000);
 
         private static void timerStart()
         {

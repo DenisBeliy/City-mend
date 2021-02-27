@@ -75,7 +75,7 @@ namespace City_mend.Create_game
             catch
             {
 
-                money = 100.423f;
+                money = 100.4256f;
             }
   
       /*      Console.WriteLine();
