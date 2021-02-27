@@ -82,6 +82,19 @@ namespace City_mend.Forms
             this.label3.BackColor = System.Drawing.Color.Transparent;
             label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
 
+            //активность кнопок
+            if (Create_LVL.village_level <= 2)
+            {
+                button1.Enabled = false;
+                button3.Enabled = false;
+                button5.Enabled = false;
+                button6.Enabled = false;
+                button8.Enabled = false;
+                button9.Enabled = false;
+            }
+     
+
+
             //загрузка данных в dataGrid
 
             try
@@ -194,6 +207,8 @@ namespace City_mend.Forms
 
         private void button1_MouseHover(object sender, EventArgs e)
         {
+            
+         
             label3.Text = "цена: " + price1;
         }
 
@@ -204,7 +219,7 @@ namespace City_mend.Forms
 
                 Create_LVL.money = Create_LVL.money - price1;
                 Random random_name = new Random();
-                // Random random_profession = new Random();
+                Random random_age = new Random();
                 Random random_temperament = new Random();
                 Random random_endurance = new Random();
                 Random random_meaning_of_life = new Random();
@@ -216,7 +231,8 @@ namespace City_mend.Forms
                 Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
 
                 dataGridView1.Rows.Add("", print_random_name, print_random_profession,
-               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%",
+               random_age.Next(63,91));
                 int colIndex = 0;
                 for (int i = 0; i < dataGridView1.RowCount - 1; i++)
                 {
@@ -226,9 +242,14 @@ namespace City_mend.Forms
 
                 int a = 0;
                 StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
-
-                a = int.Parse( reader1.ReadLine());
-
+                try
+                {
+                    a = int.Parse(reader1.ReadLine());
+                }
+                catch
+                {
+                    a = 0;
+                }
                 reader1.Close();
 
                 StreamWriter writer1 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
@@ -256,7 +277,7 @@ namespace City_mend.Forms
                 
                 Create_LVL.money = Create_LVL.money - price2;
                 Random random_name = new Random();
-                // Random random_profession = new Random();
+                Random random_age = new Random();
                 Random random_temperament = new Random();
                 Random random_endurance = new Random();
                 Random random_meaning_of_life = new Random();
@@ -268,7 +289,8 @@ namespace City_mend.Forms
                 Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
 
                 dataGridView1.Rows.Add("", print_random_name, print_random_profession,
-               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%",
+                               random_age.Next(5, 41));
                 int colIndex = 0;
                 for (int i = 0; i < dataGridView1.RowCount - 1; i++)
                 {
@@ -279,7 +301,14 @@ namespace City_mend.Forms
                 int a = 0;
                 StreamReader reader2 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
-                a = int.Parse(reader2.ReadLine());
+                try
+                {
+                    a = int.Parse(reader2.ReadLine());
+                }
+                catch
+                {
+                    a = 0;
+                }
 
                 reader2.Close();
 
@@ -309,7 +338,7 @@ namespace City_mend.Forms
                 
                 Create_LVL.money = Create_LVL.money - price3;
                 Random random_name = new Random();
-                // Random random_profession = new Random();
+                 Random random_age = new Random();
                 Random random_temperament = new Random();
                 Random random_endurance = new Random();
                 Random random_meaning_of_life = new Random();
@@ -321,7 +350,9 @@ namespace City_mend.Forms
                 Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
 
                 dataGridView1.Rows.Add("", print_random_name, print_random_profession,
-               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%",
+                               random_age.Next(20, 51)); 
+                
                 int colIndex = 0;
                 for (int i = 0; i < dataGridView1.RowCount - 1; i++)
                 {
@@ -332,7 +363,14 @@ namespace City_mend.Forms
                 int a = 0;
                 StreamReader reader2 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
-                a = int.Parse(reader2.ReadLine());
+                try
+                {
+                    a = int.Parse(reader2.ReadLine());
+                }
+                catch
+                {
+                    a = 0;
+                }
 
                 reader2.Close();
 
@@ -497,7 +535,7 @@ namespace City_mend.Forms
                 
                 Create_LVL.money = Create_LVL.money -price4 ;
                 Random random_name = new Random();
-                // Random random_profession = new Random();
+                Random random_age = new Random();
                 Random random_temperament = new Random();
                 Random random_endurance = new Random();
                 Random random_meaning_of_life = new Random();
@@ -509,7 +547,8 @@ namespace City_mend.Forms
                 Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
 
                 dataGridView1.Rows.Add("", print_random_name, print_random_profession,
-               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                                print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%",
+                                random_age.Next(5, 41));
                 int colIndex = 0;
                 for (int i = 0; i < dataGridView1.RowCount - 1; i++)
                 {
@@ -520,7 +559,14 @@ namespace City_mend.Forms
                 int a = 0;
                 StreamReader reader2 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
-                a = int.Parse(reader2.ReadLine());
+                try
+                {
+                    a = int.Parse(reader2.ReadLine());
+                }
+                catch
+                {
+                    a = 0;
+                }
 
                 reader2.Close();
 
@@ -544,7 +590,7 @@ namespace City_mend.Forms
                 
                 Create_LVL.money = Create_LVL.money - price5;
                 Random random_name = new Random();
-                // Random random_profession = new Random();
+                Random random_age = new Random();
                 Random random_temperament = new Random();
                 Random random_endurance = new Random();
                 Random random_meaning_of_life = new Random();
@@ -556,7 +602,8 @@ namespace City_mend.Forms
                 Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
 
                 dataGridView1.Rows.Add("", print_random_name, print_random_profession,
-               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                                     print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%",
+                                     random_age.Next(5, 41));
                 int colIndex = 0;
                 for (int i = 0; i < dataGridView1.RowCount - 1; i++)
                 {
@@ -567,7 +614,14 @@ namespace City_mend.Forms
                 int a = 0;
                 StreamReader reader4 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
-                a = int.Parse(reader4.ReadLine());
+                try
+                {
+                    a = int.Parse(reader4.ReadLine());
+                }
+                catch
+                {
+                    a = 0;
+                }
 
                 reader4.Close();
 
@@ -591,7 +645,7 @@ namespace City_mend.Forms
                 
                 Create_LVL.money = Create_LVL.money - price6;
                 Random random_name = new Random();
-                // Random random_profession = new Random();
+                Random random_age = new Random();
                 Random random_temperament = new Random();
                 Random random_endurance = new Random();
                 Random random_meaning_of_life = new Random();
@@ -603,7 +657,8 @@ namespace City_mend.Forms
                 Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
 
                 dataGridView1.Rows.Add("", print_random_name, print_random_profession,
-               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                                 print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%",
+                                 random_age.Next(12, 41));
                 int colIndex = 0;
                 for (int i = 0; i < dataGridView1.RowCount - 1; i++)
                 {
@@ -613,7 +668,14 @@ namespace City_mend.Forms
                 int a = 0;
                 StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
-                a = int.Parse(reader1.ReadLine());
+                try
+                {
+                    a = int.Parse(reader1.ReadLine());
+                }
+                catch
+                {
+                    a = 0;
+                }
 
                 reader1.Close();
 
@@ -637,7 +699,7 @@ namespace City_mend.Forms
                
                 Create_LVL.money = Create_LVL.money - price7;
                 Random random_name = new Random();
-                // Random random_profession = new Random();
+                Random random_age = new Random();
                 Random random_temperament = new Random();
                 Random random_endurance = new Random();
                 Random random_meaning_of_life = new Random();
@@ -649,7 +711,8 @@ namespace City_mend.Forms
                 Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
 
                 dataGridView1.Rows.Add("", print_random_name, print_random_profession,
-               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                                     print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%",
+                                     random_age.Next(5, 41));
                 int colIndex = 0;
                 for (int i = 0; i < dataGridView1.RowCount - 1; i++)
                 {
@@ -659,7 +722,14 @@ namespace City_mend.Forms
                 int a = 0;
                 StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
-                a = int.Parse(reader1.ReadLine());
+                try
+                {
+                    a = int.Parse(reader1.ReadLine());
+                }
+                catch
+                {
+                    a = 0;
+                }
 
                 reader1.Close();
 
@@ -682,7 +752,7 @@ namespace City_mend.Forms
                 
                 Create_LVL.money = Create_LVL.money - price8;
                 Random random_name = new Random();
-                // Random random_profession = new Random();
+                Random random_age = new Random();
                 Random random_temperament = new Random();
                 Random random_endurance = new Random();
                 Random random_meaning_of_life = new Random();
@@ -694,7 +764,8 @@ namespace City_mend.Forms
                 Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
 
                 dataGridView1.Rows.Add("", print_random_name, print_random_profession,
-               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%",
+                               random_age.Next(5, 41));
                 int colIndex = 0;
                 for (int i = 0; i < dataGridView1.RowCount - 1; i++)
                 {
@@ -705,7 +776,14 @@ namespace City_mend.Forms
                 int a = 0;
                 StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
-                a = int.Parse(reader1.ReadLine());
+                try
+                {
+                    a = int.Parse(reader1.ReadLine());
+                }
+                catch
+                {
+                    a = 0;
+                }
 
                 reader1.Close();
 
@@ -728,7 +806,7 @@ namespace City_mend.Forms
                
                 Create_LVL.money = Create_LVL.money - price9;
                 Random random_name = new Random();
-                // Random random_profession = new Random();
+                Random random_age = new Random();
                 Random random_temperament = new Random();
                 Random random_endurance = new Random();
                 Random random_meaning_of_life = new Random();
@@ -740,7 +818,8 @@ namespace City_mend.Forms
                 Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
 
                 dataGridView1.Rows.Add("", print_random_name, print_random_profession,
-               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+                                print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%",
+                                random_age.Next(15, 41));
                 int colIndex = 0;
                 for (int i = 0; i < dataGridView1.RowCount - 1; i++)
                 {
@@ -751,7 +830,14 @@ namespace City_mend.Forms
                 int a = 0;
                 StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
-                a = int.Parse(reader1.ReadLine());
+                try
+                {
+                    a = int.Parse(reader1.ReadLine());
+                }
+                catch
+                {
+                    a = 0;
+                }
 
                 reader1.Close();
 
@@ -764,6 +850,57 @@ namespace City_mend.Forms
             else
             {
                 MessageBox.Show("У вас нет денег!", "Внимание.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void timerAge_Tick(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            int colIndex = 6;
+            int a = 0;
+            int b = 0;
+            for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+            {
+            
+                b = Convert.ToInt32(dataGridView1[6, i].Value);
+                if (b > random.Next(65, 101))
+                {
+                    timerAge.Enabled = false;
+             
+                    string m = dataGridView1[1, i].Value.ToString();
+                    string n = dataGridView1[2, i].Value.ToString();
+                    DialogResult dialog = MessageBox.Show(m + ". Житель умер." + " Он был " + n + ".", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (dialog == DialogResult.OK)
+                    {
+                        StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                        try
+                        {
+                            a = int.Parse(reader1.ReadLine());
+                        }
+                        catch
+                        {
+                            a = 0;
+                        }
+                        reader1.Close();
+
+                        StreamWriter writer1 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                        try
+                        {
+                            writer1.Write(a - 1);
+                        }
+                        catch { }
+                        writer1.Close();
+
+                        dataGridView1.Rows.RemoveAt(i);
+                        timerAge.Enabled = true;
+
+                    }
+
+                }
+                else
+                {
+                    dataGridView1.Rows[i].Cells[colIndex].Value = b + 1;
+                }
             }
         }
     }

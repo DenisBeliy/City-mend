@@ -32,12 +32,6 @@ namespace City_mend.Forms
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.specialty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.meaning_of_life = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.temperament = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endurance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.информацияОКлассеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,6 +63,14 @@ namespace City_mend.Forms
             this.информацияОКлассеToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip9 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.информацияОКлассеToolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
+            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.specialty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.meaning_of_life = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.temperament = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endurance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timerAge = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -86,7 +88,7 @@ namespace City_mend.Forms
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(1237, -3);
+            this.label1.Location = new System.Drawing.Point(1242, -3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 46);
             this.label1.TabIndex = 1;
@@ -102,62 +104,15 @@ namespace City_mend.Forms
             this.specialty,
             this.meaning_of_life,
             this.temperament,
-            this.endurance});
-            this.dataGridView1.Location = new System.Drawing.Point(34, -3);
+            this.endurance,
+            this.age});
+            this.dataGridView1.Location = new System.Drawing.Point(-1, -3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.ShowCellErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1197, 467);
+            this.dataGridView1.Size = new System.Drawing.Size(1246, 459);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // number
-            // 
-            this.number.Frozen = true;
-            this.number.HeaderText = "Номер";
-            this.number.Name = "number";
-            this.number.ReadOnly = true;
-            this.number.Width = 104;
-            // 
-            // name
-            // 
-            this.name.Frozen = true;
-            this.name.HeaderText = "Имя";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 210;
-            // 
-            // specialty
-            // 
-            this.specialty.Frozen = true;
-            this.specialty.HeaderText = "Специальность";
-            this.specialty.Name = "specialty";
-            this.specialty.ReadOnly = true;
-            this.specialty.Width = 210;
-            // 
-            // meaning_of_life
-            // 
-            this.meaning_of_life.Frozen = true;
-            this.meaning_of_life.HeaderText = "Смысл жизни";
-            this.meaning_of_life.Name = "meaning_of_life";
-            this.meaning_of_life.ReadOnly = true;
-            this.meaning_of_life.Width = 210;
-            // 
-            // temperament
-            // 
-            this.temperament.Frozen = true;
-            this.temperament.HeaderText = "Темперамент";
-            this.temperament.Name = "temperament";
-            this.temperament.ReadOnly = true;
-            this.temperament.Width = 210;
-            // 
-            // endurance
-            // 
-            this.endurance.Frozen = true;
-            this.endurance.HeaderText = "Выносливость";
-            this.endurance.Name = "endurance";
-            this.endurance.ReadOnly = true;
-            this.endurance.Width = 210;
             // 
             // button1
             // 
@@ -165,7 +120,7 @@ namespace City_mend.Forms
             this.button1.ContextMenuStrip = this.contextMenuStrip1;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(142, 470);
+            this.button1.Location = new System.Drawing.Point(122, 468);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 83);
             this.button1.TabIndex = 3;
@@ -197,7 +152,7 @@ namespace City_mend.Forms
             this.button2.ContextMenuStrip = this.contextMenuStrip2;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(254, 470);
+            this.button2.Location = new System.Drawing.Point(234, 468);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 83);
             this.button2.TabIndex = 4;
@@ -227,7 +182,7 @@ namespace City_mend.Forms
             this.button3.ContextMenuStrip = this.contextMenuStrip3;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(366, 470);
+            this.button3.Location = new System.Drawing.Point(346, 468);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(106, 83);
             this.button3.TabIndex = 5;
@@ -257,7 +212,7 @@ namespace City_mend.Forms
             this.button4.ContextMenuStrip = this.contextMenuStrip4;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(478, 470);
+            this.button4.Location = new System.Drawing.Point(458, 468);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(106, 83);
             this.button4.TabIndex = 8;
@@ -287,7 +242,7 @@ namespace City_mend.Forms
             this.button5.ContextMenuStrip = this.contextMenuStrip5;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(590, 470);
+            this.button5.Location = new System.Drawing.Point(570, 468);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(106, 83);
             this.button5.TabIndex = 7;
@@ -318,7 +273,7 @@ namespace City_mend.Forms
             this.button6.ContextMenuStrip = this.contextMenuStrip6;
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(702, 470);
+            this.button6.Location = new System.Drawing.Point(682, 468);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(106, 83);
             this.button6.TabIndex = 6;
@@ -334,7 +289,7 @@ namespace City_mend.Forms
             this.button7.ContextMenuStrip = this.contextMenuStrip7;
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(814, 470);
+            this.button7.Location = new System.Drawing.Point(794, 468);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(106, 83);
             this.button7.TabIndex = 11;
@@ -350,7 +305,7 @@ namespace City_mend.Forms
             this.button8.ContextMenuStrip = this.contextMenuStrip8;
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button8.Location = new System.Drawing.Point(926, 470);
+            this.button8.Location = new System.Drawing.Point(906, 468);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(106, 83);
             this.button8.TabIndex = 10;
@@ -366,7 +321,7 @@ namespace City_mend.Forms
             this.button9.ContextMenuStrip = this.contextMenuStrip9;
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button9.Location = new System.Drawing.Point(1038, 470);
+            this.button9.Location = new System.Drawing.Point(1018, 468);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(106, 83);
             this.button9.TabIndex = 9;
@@ -397,7 +352,7 @@ namespace City_mend.Forms
             this.button10.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button10.Location = new System.Drawing.Point(1159, 486);
+            this.button10.Location = new System.Drawing.Point(1139, 484);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(106, 51);
             this.button10.TabIndex = 13;
@@ -408,10 +363,10 @@ namespace City_mend.Forms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(571, 693);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(565, 670);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 15);
+            this.label3.Size = new System.Drawing.Size(97, 36);
             this.label3.TabIndex = 14;
             this.label3.Text = "label3";
             // 
@@ -470,6 +425,68 @@ namespace City_mend.Forms
             this.информацияОКлассеToolStripMenuItem8.Size = new System.Drawing.Size(198, 22);
             this.информацияОКлассеToolStripMenuItem8.Text = "Информация о классе";
             this.информацияОКлассеToolStripMenuItem8.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem8_Click);
+            // 
+            // number
+            // 
+            this.number.Frozen = true;
+            this.number.HeaderText = "Номер";
+            this.number.Name = "number";
+            this.number.ReadOnly = true;
+            this.number.Width = 104;
+            // 
+            // name
+            // 
+            this.name.Frozen = true;
+            this.name.HeaderText = "Имя";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 210;
+            // 
+            // specialty
+            // 
+            this.specialty.Frozen = true;
+            this.specialty.HeaderText = "Специальность";
+            this.specialty.Name = "specialty";
+            this.specialty.ReadOnly = true;
+            this.specialty.Width = 210;
+            // 
+            // meaning_of_life
+            // 
+            this.meaning_of_life.Frozen = true;
+            this.meaning_of_life.HeaderText = "Смысл жизни";
+            this.meaning_of_life.Name = "meaning_of_life";
+            this.meaning_of_life.ReadOnly = true;
+            this.meaning_of_life.Width = 210;
+            // 
+            // temperament
+            // 
+            this.temperament.Frozen = true;
+            this.temperament.HeaderText = "Темперамент";
+            this.temperament.Name = "temperament";
+            this.temperament.ReadOnly = true;
+            this.temperament.Width = 210;
+            // 
+            // endurance
+            // 
+            this.endurance.Frozen = true;
+            this.endurance.HeaderText = "Выносливость";
+            this.endurance.Name = "endurance";
+            this.endurance.ReadOnly = true;
+            this.endurance.Width = 190;
+            // 
+            // age
+            // 
+            this.age.Frozen = true;
+            this.age.HeaderText = "Возраст";
+            this.age.Name = "age";
+            this.age.ReadOnly = true;
+            this.age.Width = 73;
+            // 
+            // timerAge
+            // 
+            this.timerAge.Enabled = true;
+            this.timerAge.Interval = 3000;
+            this.timerAge.Tick += new System.EventHandler(this.timerAge_Tick);
             // 
             // Residents
             // 
@@ -533,12 +550,6 @@ namespace City_mend.Forms
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timerMoney;
-        private System.Windows.Forms.DataGridViewTextBoxColumn number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn specialty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn meaning_of_life;
-        private System.Windows.Forms.DataGridViewTextBoxColumn temperament;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endurance;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -559,5 +570,13 @@ namespace City_mend.Forms
         private System.Windows.Forms.ToolStripMenuItem информацияОКлассеToolStripMenuItem7;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip9;
         private System.Windows.Forms.ToolStripMenuItem информацияОКлассеToolStripMenuItem8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specialty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn meaning_of_life;
+        private System.Windows.Forms.DataGridViewTextBoxColumn temperament;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endurance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn age;
+        private System.Windows.Forms.Timer timerAge;
     }
 }

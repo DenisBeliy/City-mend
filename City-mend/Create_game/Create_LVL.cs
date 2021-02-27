@@ -52,7 +52,7 @@ namespace City_mend.Create_game
             catch
             {
 
-                village_level = 0;
+                village_level = 3;
             }
 
             //food
