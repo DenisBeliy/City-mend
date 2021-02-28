@@ -32,6 +32,13 @@ namespace City_mend.Forms
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.specialty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.meaning_of_life = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.temperament = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endurance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.информацияОКлассеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,29 +55,33 @@ namespace City_mend.Forms
             this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.информацияОКлассеToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.button6 = new System.Windows.Forms.Button();
+            this.contextMenuStrip6 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.информацияОКлассеToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.button7 = new System.Windows.Forms.Button();
+            this.contextMenuStrip7 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.информацияОКлассеToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.button8 = new System.Windows.Forms.Button();
+            this.contextMenuStrip8 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.информацияОКлассеToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.button9 = new System.Windows.Forms.Button();
+            this.contextMenuStrip9 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.информацияОКлассеToolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.timerMoney = new System.Windows.Forms.Timer(this.components);
             this.button10 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.contextMenuStrip6 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.информацияОКлассеToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip7 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.информацияОКлассеToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip8 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.информацияОКлассеToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip9 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.информацияОКлассеToolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
-            this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.specialty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.meaning_of_life = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.temperament = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endurance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timerAge = new System.Windows.Forms.Timer(this.components);
+            this.contextMenuStrip10 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.сталкерToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сталкерToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.охотникЗаГоловамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.учёныйToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.пастухToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.каменщикToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.кузнецToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.священникToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.монахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.торговецToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -81,6 +92,7 @@ namespace City_mend.Forms
             this.contextMenuStrip7.SuspendLayout();
             this.contextMenuStrip8.SuspendLayout();
             this.contextMenuStrip9.SuspendLayout();
+            this.contextMenuStrip10.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -114,9 +126,65 @@ namespace City_mend.Forms
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // number
+            // 
+            this.number.Frozen = true;
+            this.number.HeaderText = "Номер";
+            this.number.Name = "number";
+            this.number.ReadOnly = true;
+            this.number.Width = 104;
+            // 
+            // name
+            // 
+            this.name.Frozen = true;
+            this.name.HeaderText = "Имя";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 210;
+            // 
+            // specialty
+            // 
+            this.specialty.Frozen = true;
+            this.specialty.HeaderText = "Специальность";
+            this.specialty.Name = "specialty";
+            this.specialty.ReadOnly = true;
+            this.specialty.Width = 210;
+            // 
+            // meaning_of_life
+            // 
+            this.meaning_of_life.Frozen = true;
+            this.meaning_of_life.HeaderText = "Смысл жизни";
+            this.meaning_of_life.Name = "meaning_of_life";
+            this.meaning_of_life.ReadOnly = true;
+            this.meaning_of_life.Width = 210;
+            // 
+            // temperament
+            // 
+            this.temperament.Frozen = true;
+            this.temperament.HeaderText = "Темперамент";
+            this.temperament.Name = "temperament";
+            this.temperament.ReadOnly = true;
+            this.temperament.Width = 210;
+            // 
+            // endurance
+            // 
+            this.endurance.Frozen = true;
+            this.endurance.HeaderText = "Выносливость";
+            this.endurance.Name = "endurance";
+            this.endurance.ReadOnly = true;
+            this.endurance.Width = 190;
+            // 
+            // age
+            // 
+            this.age.Frozen = true;
+            this.age.HeaderText = "Возраст";
+            this.age.Name = "age";
+            this.age.ReadOnly = true;
+            this.age.Width = 73;
+            // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button1.BackColor = System.Drawing.Color.DimGray;
             this.button1.ContextMenuStrip = this.contextMenuStrip1;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -178,7 +246,7 @@ namespace City_mend.Forms
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Brown;
+            this.button3.BackColor = System.Drawing.Color.DarkSlateGray;
             this.button3.ContextMenuStrip = this.contextMenuStrip3;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -198,6 +266,7 @@ namespace City_mend.Forms
             this.информацияОКлассеToolStripMenuItem2});
             this.contextMenuStrip3.Name = "contextMenuStrip3";
             this.contextMenuStrip3.Size = new System.Drawing.Size(199, 26);
+            this.contextMenuStrip3.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip3_Opening);
             // 
             // информацияОКлассеToolStripMenuItem2
             // 
@@ -208,7 +277,7 @@ namespace City_mend.Forms
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.RosyBrown;
+            this.button4.BackColor = System.Drawing.Color.GreenYellow;
             this.button4.ContextMenuStrip = this.contextMenuStrip4;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -238,7 +307,7 @@ namespace City_mend.Forms
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.OrangeRed;
+            this.button5.BackColor = System.Drawing.Color.Beige;
             this.button5.ContextMenuStrip = this.contextMenuStrip5;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -259,6 +328,7 @@ namespace City_mend.Forms
             this.информацияОКлассеToolStripMenuItem4});
             this.contextMenuStrip5.Name = "contextMenuStrip5";
             this.contextMenuStrip5.Size = new System.Drawing.Size(199, 26);
+            this.contextMenuStrip5.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip5_Opening);
             // 
             // информацияОКлассеToolStripMenuItem4
             // 
@@ -269,7 +339,7 @@ namespace City_mend.Forms
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button6.ContextMenuStrip = this.contextMenuStrip6;
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -283,9 +353,23 @@ namespace City_mend.Forms
             this.button6.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             this.button6.MouseHover += new System.EventHandler(this.button6_MouseHover);
             // 
+            // contextMenuStrip6
+            // 
+            this.contextMenuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.информацияОКлассеToolStripMenuItem5});
+            this.contextMenuStrip6.Name = "contextMenuStrip6";
+            this.contextMenuStrip6.Size = new System.Drawing.Size(199, 26);
+            // 
+            // информацияОКлассеToolStripMenuItem5
+            // 
+            this.информацияОКлассеToolStripMenuItem5.Name = "информацияОКлассеToolStripMenuItem5";
+            this.информацияОКлассеToolStripMenuItem5.Size = new System.Drawing.Size(198, 22);
+            this.информацияОКлассеToolStripMenuItem5.Text = "Информация о классе";
+            this.информацияОКлассеToolStripMenuItem5.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem5_Click);
+            // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.Bisque;
+            this.button7.BackColor = System.Drawing.Color.White;
             this.button7.ContextMenuStrip = this.contextMenuStrip7;
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -299,9 +383,23 @@ namespace City_mend.Forms
             this.button7.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             this.button7.MouseHover += new System.EventHandler(this.button7_MouseHover);
             // 
+            // contextMenuStrip7
+            // 
+            this.contextMenuStrip7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.информацияОКлассеToolStripMenuItem6});
+            this.contextMenuStrip7.Name = "contextMenuStrip7";
+            this.contextMenuStrip7.Size = new System.Drawing.Size(199, 26);
+            // 
+            // информацияОКлассеToolStripMenuItem6
+            // 
+            this.информацияОКлассеToolStripMenuItem6.Name = "информацияОКлассеToolStripMenuItem6";
+            this.информацияОКлассеToolStripMenuItem6.Size = new System.Drawing.Size(198, 22);
+            this.информацияОКлассеToolStripMenuItem6.Text = "Информация о классе";
+            this.информацияОКлассеToolStripMenuItem6.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem6_Click);
+            // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.SeaShell;
+            this.button8.BackColor = System.Drawing.Color.White;
             this.button8.ContextMenuStrip = this.contextMenuStrip8;
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -315,9 +413,23 @@ namespace City_mend.Forms
             this.button8.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             this.button8.MouseHover += new System.EventHandler(this.button8_MouseHover);
             // 
+            // contextMenuStrip8
+            // 
+            this.contextMenuStrip8.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.информацияОКлассеToolStripMenuItem7});
+            this.contextMenuStrip8.Name = "contextMenuStrip8";
+            this.contextMenuStrip8.Size = new System.Drawing.Size(199, 26);
+            // 
+            // информацияОКлассеToolStripMenuItem7
+            // 
+            this.информацияОКлассеToolStripMenuItem7.Name = "информацияОКлассеToolStripMenuItem7";
+            this.информацияОКлассеToolStripMenuItem7.Size = new System.Drawing.Size(198, 22);
+            this.информацияОКлассеToolStripMenuItem7.Text = "Информация о классе";
+            this.информацияОКлассеToolStripMenuItem7.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem7_Click);
+            // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.button9.BackColor = System.Drawing.Color.Gold;
             this.button9.ContextMenuStrip = this.contextMenuStrip9;
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -330,6 +442,20 @@ namespace City_mend.Forms
             this.button9.Click += new System.EventHandler(this.button9_Click);
             this.button9.MouseLeave += new System.EventHandler(this.button1_MouseLeave);
             this.button9.MouseHover += new System.EventHandler(this.button9_MouseHover);
+            // 
+            // contextMenuStrip9
+            // 
+            this.contextMenuStrip9.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.информацияОКлассеToolStripMenuItem8});
+            this.contextMenuStrip9.Name = "contextMenuStrip9";
+            this.contextMenuStrip9.Size = new System.Drawing.Size(199, 26);
+            // 
+            // информацияОКлассеToolStripMenuItem8
+            // 
+            this.информацияОКлассеToolStripMenuItem8.Name = "информацияОКлассеToolStripMenuItem8";
+            this.информацияОКлассеToolStripMenuItem8.Size = new System.Drawing.Size(198, 22);
+            this.информацияОКлассеToolStripMenuItem8.Text = "Информация о классе";
+            this.информацияОКлассеToolStripMenuItem8.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem8_Click);
             // 
             // label2
             // 
@@ -370,123 +496,98 @@ namespace City_mend.Forms
             this.label3.TabIndex = 14;
             this.label3.Text = "label3";
             // 
-            // contextMenuStrip6
-            // 
-            this.contextMenuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.информацияОКлассеToolStripMenuItem5});
-            this.contextMenuStrip6.Name = "contextMenuStrip6";
-            this.contextMenuStrip6.Size = new System.Drawing.Size(199, 26);
-            // 
-            // информацияОКлассеToolStripMenuItem5
-            // 
-            this.информацияОКлассеToolStripMenuItem5.Name = "информацияОКлассеToolStripMenuItem5";
-            this.информацияОКлассеToolStripMenuItem5.Size = new System.Drawing.Size(198, 22);
-            this.информацияОКлассеToolStripMenuItem5.Text = "Информация о классе";
-            this.информацияОКлассеToolStripMenuItem5.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem5_Click);
-            // 
-            // contextMenuStrip7
-            // 
-            this.contextMenuStrip7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.информацияОКлассеToolStripMenuItem6});
-            this.contextMenuStrip7.Name = "contextMenuStrip7";
-            this.contextMenuStrip7.Size = new System.Drawing.Size(199, 26);
-            // 
-            // информацияОКлассеToolStripMenuItem6
-            // 
-            this.информацияОКлассеToolStripMenuItem6.Name = "информацияОКлассеToolStripMenuItem6";
-            this.информацияОКлассеToolStripMenuItem6.Size = new System.Drawing.Size(198, 22);
-            this.информацияОКлассеToolStripMenuItem6.Text = "Информация о классе";
-            this.информацияОКлассеToolStripMenuItem6.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem6_Click);
-            // 
-            // contextMenuStrip8
-            // 
-            this.contextMenuStrip8.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.информацияОКлассеToolStripMenuItem7});
-            this.contextMenuStrip8.Name = "contextMenuStrip8";
-            this.contextMenuStrip8.Size = new System.Drawing.Size(199, 26);
-            // 
-            // информацияОКлассеToolStripMenuItem7
-            // 
-            this.информацияОКлассеToolStripMenuItem7.Name = "информацияОКлассеToolStripMenuItem7";
-            this.информацияОКлассеToolStripMenuItem7.Size = new System.Drawing.Size(198, 22);
-            this.информацияОКлассеToolStripMenuItem7.Text = "Информация о классе";
-            this.информацияОКлассеToolStripMenuItem7.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem7_Click);
-            // 
-            // contextMenuStrip9
-            // 
-            this.contextMenuStrip9.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.информацияОКлассеToolStripMenuItem8});
-            this.contextMenuStrip9.Name = "contextMenuStrip9";
-            this.contextMenuStrip9.Size = new System.Drawing.Size(199, 26);
-            // 
-            // информацияОКлассеToolStripMenuItem8
-            // 
-            this.информацияОКлассеToolStripMenuItem8.Name = "информацияОКлассеToolStripMenuItem8";
-            this.информацияОКлассеToolStripMenuItem8.Size = new System.Drawing.Size(198, 22);
-            this.информацияОКлассеToolStripMenuItem8.Text = "Информация о классе";
-            this.информацияОКлассеToolStripMenuItem8.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem8_Click);
-            // 
-            // number
-            // 
-            this.number.Frozen = true;
-            this.number.HeaderText = "Номер";
-            this.number.Name = "number";
-            this.number.ReadOnly = true;
-            this.number.Width = 104;
-            // 
-            // name
-            // 
-            this.name.Frozen = true;
-            this.name.HeaderText = "Имя";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 210;
-            // 
-            // specialty
-            // 
-            this.specialty.Frozen = true;
-            this.specialty.HeaderText = "Специальность";
-            this.specialty.Name = "specialty";
-            this.specialty.ReadOnly = true;
-            this.specialty.Width = 210;
-            // 
-            // meaning_of_life
-            // 
-            this.meaning_of_life.Frozen = true;
-            this.meaning_of_life.HeaderText = "Смысл жизни";
-            this.meaning_of_life.Name = "meaning_of_life";
-            this.meaning_of_life.ReadOnly = true;
-            this.meaning_of_life.Width = 210;
-            // 
-            // temperament
-            // 
-            this.temperament.Frozen = true;
-            this.temperament.HeaderText = "Темперамент";
-            this.temperament.Name = "temperament";
-            this.temperament.ReadOnly = true;
-            this.temperament.Width = 210;
-            // 
-            // endurance
-            // 
-            this.endurance.Frozen = true;
-            this.endurance.HeaderText = "Выносливость";
-            this.endurance.Name = "endurance";
-            this.endurance.ReadOnly = true;
-            this.endurance.Width = 190;
-            // 
-            // age
-            // 
-            this.age.Frozen = true;
-            this.age.HeaderText = "Возраст";
-            this.age.Name = "age";
-            this.age.ReadOnly = true;
-            this.age.Width = 73;
-            // 
             // timerAge
             // 
             this.timerAge.Enabled = true;
             this.timerAge.Interval = 3000;
             this.timerAge.Tick += new System.EventHandler(this.timerAge_Tick);
+            // 
+            // contextMenuStrip10
+            // 
+            this.contextMenuStrip10.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.сталкерToolStripMenuItem});
+            this.contextMenuStrip10.Name = "contextMenuStrip10";
+            this.contextMenuStrip10.Size = new System.Drawing.Size(205, 26);
+            this.contextMenuStrip10.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip10_Opening);
+            // 
+            // сталкерToolStripMenuItem
+            // 
+            this.сталкерToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.сталкерToolStripMenuItem1,
+            this.охотникЗаГоловамиToolStripMenuItem,
+            this.учёныйToolStripMenuItem,
+            this.пастухToolStripMenuItem,
+            this.каменщикToolStripMenuItem,
+            this.кузнецToolStripMenuItem,
+            this.священникToolStripMenuItem,
+            this.монахToolStripMenuItem,
+            this.торговецToolStripMenuItem});
+            this.сталкерToolStripMenuItem.Name = "сталкерToolStripMenuItem";
+            this.сталкерToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.сталкерToolStripMenuItem.Text = "Информация о классах";
+            // 
+            // сталкерToolStripMenuItem1
+            // 
+            this.сталкерToolStripMenuItem1.Name = "сталкерToolStripMenuItem1";
+            this.сталкерToolStripMenuItem1.Size = new System.Drawing.Size(192, 22);
+            this.сталкерToolStripMenuItem1.Text = "Сталкер";
+            this.сталкерToolStripMenuItem1.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem_Click);
+            // 
+            // охотникЗаГоловамиToolStripMenuItem
+            // 
+            this.охотникЗаГоловамиToolStripMenuItem.Name = "охотникЗаГоловамиToolStripMenuItem";
+            this.охотникЗаГоловамиToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.охотникЗаГоловамиToolStripMenuItem.Text = "Охотник за головами";
+            this.охотникЗаГоловамиToolStripMenuItem.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem1_Click);
+            // 
+            // учёныйToolStripMenuItem
+            // 
+            this.учёныйToolStripMenuItem.Name = "учёныйToolStripMenuItem";
+            this.учёныйToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.учёныйToolStripMenuItem.Text = "Учёный";
+            this.учёныйToolStripMenuItem.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem2_Click);
+            // 
+            // пастухToolStripMenuItem
+            // 
+            this.пастухToolStripMenuItem.Name = "пастухToolStripMenuItem";
+            this.пастухToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.пастухToolStripMenuItem.Text = "Пастух";
+            this.пастухToolStripMenuItem.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem3_Click);
+            // 
+            // каменщикToolStripMenuItem
+            // 
+            this.каменщикToolStripMenuItem.Name = "каменщикToolStripMenuItem";
+            this.каменщикToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.каменщикToolStripMenuItem.Text = "Каменщик";
+            this.каменщикToolStripMenuItem.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem4_Click);
+            // 
+            // кузнецToolStripMenuItem
+            // 
+            this.кузнецToolStripMenuItem.Name = "кузнецToolStripMenuItem";
+            this.кузнецToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.кузнецToolStripMenuItem.Text = "Кузнец";
+            this.кузнецToolStripMenuItem.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem5_Click);
+            // 
+            // священникToolStripMenuItem
+            // 
+            this.священникToolStripMenuItem.Name = "священникToolStripMenuItem";
+            this.священникToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.священникToolStripMenuItem.Text = "Священник";
+            this.священникToolStripMenuItem.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem6_Click);
+            // 
+            // монахToolStripMenuItem
+            // 
+            this.монахToolStripMenuItem.Name = "монахToolStripMenuItem";
+            this.монахToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.монахToolStripMenuItem.Text = "Монах";
+            this.монахToolStripMenuItem.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem7_Click);
+            // 
+            // торговецToolStripMenuItem
+            // 
+            this.торговецToolStripMenuItem.Name = "торговецToolStripMenuItem";
+            this.торговецToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.торговецToolStripMenuItem.Text = "Торговец";
+            this.торговецToolStripMenuItem.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem8_Click);
             // 
             // Residents
             // 
@@ -495,6 +596,7 @@ namespace City_mend.Forms
             this.BackColor = System.Drawing.Color.Maroon;
             this.BackgroundImage = global::City_mend.Properties.Resources.backImage_;
             this.ClientSize = new System.Drawing.Size(1277, 721);
+            this.ContextMenuStrip = this.contextMenuStrip10;
             this.ControlBox = false;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button10);
@@ -521,6 +623,8 @@ namespace City_mend.Forms
             this.TopMost = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Residents_FormClosed);
             this.Load += new System.EventHandler(this.Residents_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Residents_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Residents_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.contextMenuStrip2.ResumeLayout(false);
@@ -531,6 +635,7 @@ namespace City_mend.Forms
             this.contextMenuStrip7.ResumeLayout(false);
             this.contextMenuStrip8.ResumeLayout(false);
             this.contextMenuStrip9.ResumeLayout(false);
+            this.contextMenuStrip10.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -578,5 +683,16 @@ namespace City_mend.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn endurance;
         private System.Windows.Forms.DataGridViewTextBoxColumn age;
         private System.Windows.Forms.Timer timerAge;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip10;
+        private System.Windows.Forms.ToolStripMenuItem сталкерToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem сталкерToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem охотникЗаГоловамиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem учёныйToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem пастухToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem каменщикToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem кузнецToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem священникToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem монахToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem торговецToolStripMenuItem;
     }
 }

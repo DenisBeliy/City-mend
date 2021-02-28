@@ -123,7 +123,10 @@ namespace City_mend.Forms
         {
             label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
             label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
-        }
+         
+            
+          
+            }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -142,7 +145,7 @@ namespace City_mend.Forms
                 Random random_temperament = new Random();
                 Random random_endurance = new Random();
                 Random random_meaning_of_life = new Random();
-
+                Random random_age = new Random();
 
                 Names print_random_name = (Names)random_name.Next(0, 100);
                 Profession print_random_profession = (Profession)random_profession.Next(0, 8);
@@ -150,7 +153,8 @@ namespace City_mend.Forms
                 Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
 
                 dataGridView1.Rows.Add("", print_random_name, print_random_profession,
-               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%");
+               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%",
+               random_age.Next(5, 41));
 
 
 
@@ -240,6 +244,7 @@ namespace City_mend.Forms
 
                 }
 
+
                 int a = 0;
                 StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
                 try
@@ -255,6 +260,7 @@ namespace City_mend.Forms
                 StreamWriter writer1 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
                 writer1.Write(a + 1);
                 writer1.Close();
+
 
                 label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
                 label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
@@ -360,23 +366,24 @@ namespace City_mend.Forms
 
                 }
 
+
                 int a = 0;
-                StreamReader reader2 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                StreamReader reader3 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
                 try
                 {
-                    a = int.Parse(reader2.ReadLine());
+                    a = int.Parse(reader3.ReadLine());
                 }
                 catch
                 {
                     a = 0;
                 }
 
-                reader2.Close();
+                reader3.Close();
 
-                StreamWriter writer2 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
-                writer2.Write(a + 1);
-                writer2.Close();
+                StreamWriter writer3 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer3.Write(a + 1);
+                writer3.Close();
 
                 label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
                 label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
@@ -436,50 +443,61 @@ namespace City_mend.Forms
         {
           
            LVL_logics.timer1.Stop();
+            timerAge.Stop();
            DialogResult result1 = MessageBox.Show("buton1", "     Сталкер", MessageBoxButtons.OK);
             if (result1 == DialogResult.OK )
             {
                 LVL_logics.timer1.Start();
+                timerAge.Start();
             }
         }
 
         private void информацияОКлассеToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             LVL_logics.timer1.Stop();
+            timerAge.Stop();
+           
             DialogResult result2 = MessageBox.Show("buton2", "     Охотник за головами", MessageBoxButtons.OK);
             if (result2 == DialogResult.OK)
             {
                 LVL_logics.timer1.Start();
+                timerAge.Start();
             }
         }
 
         private void информацияОКлассеToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             LVL_logics.timer1.Stop();
+            timerAge.Stop();
             DialogResult result3 = MessageBox.Show("buton3", "     Ученый", MessageBoxButtons.OK);
             if (result3 == DialogResult.OK)
             {
                 LVL_logics.timer1.Start();
+                timerAge.Start();
             }
         }
 
         private void информацияОКлассеToolStripMenuItem3_Click(object sender, EventArgs e)
         {
             LVL_logics.timer1.Stop();
+            timerAge.Stop();
             DialogResult result3 = MessageBox.Show("buton4", "     Пастух", MessageBoxButtons.OK);
             if (result3 == DialogResult.OK)
             {
                 LVL_logics.timer1.Start();
+                timerAge.Start();
             }
         }
 
         private void информацияОКлассеToolStripMenuItem4_Click(object sender, EventArgs e)
         {
             LVL_logics.timer1.Stop();
+            timerAge.Stop();
             DialogResult result3 = MessageBox.Show("buton5", "     Каменщик", MessageBoxButtons.OK);
             if (result3 == DialogResult.OK)
             {
                 LVL_logics.timer1.Start();
+                timerAge.Start();
             }
         }
 
@@ -491,40 +509,49 @@ namespace City_mend.Forms
         private void информацияОКлассеToolStripMenuItem5_Click(object sender, EventArgs e)
         {
             LVL_logics.timer1.Stop();
+            timerAge.Stop();
+            timerAge.Stop();
             DialogResult result3 = MessageBox.Show("buton6", "     Кузнец", MessageBoxButtons.OK);
             if (result3 == DialogResult.OK)
             {
                 LVL_logics.timer1.Start();
+                timerAge.Start();
             }
         }
 
         private void информацияОКлассеToolStripMenuItem6_Click(object sender, EventArgs e)
         {
             LVL_logics.timer1.Stop();
+            timerAge.Stop();
             DialogResult result3 = MessageBox.Show("buton7", "     Священник", MessageBoxButtons.OK);
             if (result3 == DialogResult.OK)
             {
                 LVL_logics.timer1.Start();
+                timerAge.Start();
             }
         }
 
         private void информацияОКлассеToolStripMenuItem7_Click(object sender, EventArgs e)
         {
             LVL_logics.timer1.Stop();
+            timerAge.Stop();
             DialogResult result3 = MessageBox.Show("buton8", "     Монах", MessageBoxButtons.OK);
             if (result3 == DialogResult.OK)
             {
                 LVL_logics.timer1.Start();
+                timerAge.Start();
             }
         }
 
         private void информацияОКлассеToolStripMenuItem8_Click(object sender, EventArgs e)
         {
             LVL_logics.timer1.Stop();
+            timerAge.Stop();
             DialogResult result3 = MessageBox.Show("buton9", "     Торговец", MessageBoxButtons.OK);
             if (result3 == DialogResult.OK)
             {
                 LVL_logics.timer1.Start();
+                timerAge.Start();
             }
         }
 
@@ -557,22 +584,22 @@ namespace City_mend.Forms
                 }
 
                 int a = 0;
-                StreamReader reader2 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                StreamReader reader4 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
                 try
                 {
-                    a = int.Parse(reader2.ReadLine());
+                    a = int.Parse(reader4.ReadLine());
                 }
                 catch
                 {
                     a = 0;
                 }
 
-                reader2.Close();
+                reader4.Close();
 
-                StreamWriter writer2 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
-                writer2.Write(a + 1);
-                writer2.Close();
+                StreamWriter writer4 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer4.Write(a + 1);
+                writer4.Close();
 
                 label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
                 label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
@@ -612,22 +639,22 @@ namespace City_mend.Forms
                 }
 
                 int a = 0;
-                StreamReader reader4 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                StreamReader reader5 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
                 try
                 {
-                    a = int.Parse(reader4.ReadLine());
+                    a = int.Parse(reader5.ReadLine());
                 }
                 catch
                 {
                     a = 0;
                 }
 
-                reader4.Close();
+                reader5.Close();
 
-                StreamWriter writer4 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
-                writer4.Write(a + 1);
-                writer4.Close();
+                StreamWriter writer5 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer5.Write(a + 1);
+                writer5.Close();
 
                 label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
                 label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
@@ -665,23 +692,24 @@ namespace City_mend.Forms
                     dataGridView1.Rows[i].Cells[colIndex].Value = i + 1;
 
                 }
+
                 int a = 0;
-                StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                StreamReader reader6 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
                 try
                 {
-                    a = int.Parse(reader1.ReadLine());
+                    a = int.Parse(reader6.ReadLine());
                 }
                 catch
                 {
                     a = 0;
                 }
 
-                reader1.Close();
+                reader6.Close();
 
-                StreamWriter writer1 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
-                writer1.Write(a + 1);
-                writer1.Close();
+                StreamWriter writer6 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer6.Write(a + 1);
+                writer6.Close();
 
                 label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
                 label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
@@ -719,23 +747,25 @@ namespace City_mend.Forms
                     dataGridView1.Rows[i].Cells[colIndex].Value = i + 1;
 
                 }
+
                 int a = 0;
-                StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                StreamReader reader7 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
                 try
                 {
-                    a = int.Parse(reader1.ReadLine());
+                    a = int.Parse(reader7.ReadLine());
                 }
                 catch
                 {
                     a = 0;
                 }
 
-                reader1.Close();
+                reader7.Close();
 
-                StreamWriter writer1 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
-                writer1.Write(a + 1);
-                writer1.Close();
+                StreamWriter writer7 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer7.Write(a + 1);
+                writer7.Close();
+
                 label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
                 label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
             }
@@ -774,22 +804,23 @@ namespace City_mend.Forms
                 }
 
                 int a = 0;
-                StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                StreamReader reader8 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
                 try
                 {
-                    a = int.Parse(reader1.ReadLine());
+                    a = int.Parse(reader8.ReadLine());
                 }
                 catch
                 {
                     a = 0;
                 }
 
-                reader1.Close();
+                reader8.Close();
 
-                StreamWriter writer1 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
-                writer1.Write(a + 1);
-                writer1.Close();
+                StreamWriter writer8 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer8.Write(a + 1);
+                writer8.Close();
+
                 label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
                 label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
             }
@@ -828,22 +859,23 @@ namespace City_mend.Forms
                 }
 
                 int a = 0;
-                StreamReader reader1 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                StreamReader reader9 = new StreamReader(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
 
                 try
                 {
-                    a = int.Parse(reader1.ReadLine());
+                    a = int.Parse(reader9.ReadLine());
                 }
                 catch
                 {
                     a = 0;
                 }
 
-                reader1.Close();
+                reader9.Close();
 
-                StreamWriter writer1 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
-                writer1.Write(a + 1);
-                writer1.Close();
+                StreamWriter writer9 = new StreamWriter(@"C://Сохранения игры City-mend//" + "Save_residents.D&D");
+                writer9.Write(a + 1);
+                writer9.Close();
+
                 label2.Text = Create_LVL.money.ToString() + " D/Dcoins";
                 label2.Text = Math.Round(Create_LVL.money, 2).ToString() + " D/Dcoins";
             }
@@ -902,6 +934,31 @@ namespace City_mend.Forms
                     dataGridView1.Rows[i].Cells[colIndex].Value = b + 1;
                 }
             }
+        }
+
+        private void contextMenuStrip10_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip3_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip5_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void Residents_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void Residents_KeyUp(object sender, KeyEventArgs e)
+        {
+
         }
     }
 
