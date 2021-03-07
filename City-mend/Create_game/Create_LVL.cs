@@ -13,6 +13,7 @@ namespace City_mend.Create_game
         public static int residents = 1;
         public static int food;
         public static float money;
+        
         //конструктор
         public Create_LVL()
         {

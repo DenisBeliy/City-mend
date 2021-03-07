@@ -82,6 +82,7 @@ namespace City_mend.Forms
             this.священникToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.монахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.торговецToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button11 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -589,6 +590,16 @@ namespace City_mend.Forms
             this.торговецToolStripMenuItem.Text = "Торговец";
             this.торговецToolStripMenuItem.Click += new System.EventHandler(this.информацияОКлассеToolStripMenuItem8_Click);
             // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(1241, 689);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(24, 23);
+            this.button11.TabIndex = 15;
+            this.button11.Text = "?";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // Residents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -598,6 +609,7 @@ namespace City_mend.Forms
             this.ClientSize = new System.Drawing.Size(1277, 721);
             this.ContextMenuStrip = this.contextMenuStrip10;
             this.ControlBox = false;
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label2);
@@ -682,7 +694,6 @@ namespace City_mend.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn temperament;
         private System.Windows.Forms.DataGridViewTextBoxColumn endurance;
         private System.Windows.Forms.DataGridViewTextBoxColumn age;
-        private System.Windows.Forms.Timer timerAge;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip10;
         private System.Windows.Forms.ToolStripMenuItem сталкерToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сталкерToolStripMenuItem1;
@@ -694,5 +705,7 @@ namespace City_mend.Forms
         private System.Windows.Forms.ToolStripMenuItem священникToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem монахToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem торговецToolStripMenuItem;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Timer timerAge;
     }
 }

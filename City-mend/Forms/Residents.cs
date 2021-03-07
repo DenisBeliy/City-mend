@@ -15,6 +15,7 @@ namespace City_mend.Forms
 {
     public partial class Residents : Form
     {
+
         public Residents()
         {
             InitializeComponent();
@@ -959,6 +960,11 @@ namespace City_mend.Forms
         private void Residents_KeyUp(object sender, KeyEventArgs e)
         {
 
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip10.Show(button11.Location);
         }
     }
 
