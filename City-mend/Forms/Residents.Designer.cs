@@ -83,6 +83,7 @@ namespace City_mend.Forms
             this.монахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.торговецToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button11 = new System.Windows.Forms.Button();
+            this.timer_age = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
@@ -499,7 +500,6 @@ namespace City_mend.Forms
             // 
             // timerAge
             // 
-            this.timerAge.Enabled = true;
             this.timerAge.Interval = 3000;
             this.timerAge.Tick += new System.EventHandler(this.timerAge_Tick);
             // 
@@ -599,6 +599,12 @@ namespace City_mend.Forms
             this.button11.Text = "?";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // timer_age
+            // 
+            this.timer_age.Enabled = true;
+            this.timer_age.Interval = 1000;
+            this.timer_age.Tick += new System.EventHandler(this.timer_age_Tick);
             // 
             // Residents
             // 
@@ -707,5 +713,6 @@ namespace City_mend.Forms
         private System.Windows.Forms.ToolStripMenuItem торговецToolStripMenuItem;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Timer timerAge;
+        private System.Windows.Forms.Timer timer_age;
     }
 }

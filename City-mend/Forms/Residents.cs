@@ -86,15 +86,21 @@ namespace City_mend.Forms
             //активность кнопок
             if (Create_LVL.village_level <= 2)
             {
-                button1.Enabled = false;
+               // button1.Enabled = false;
                 button3.Enabled = false;
                 button5.Enabled = false;
                 button6.Enabled = false;
                 button8.Enabled = false;
                 button9.Enabled = false;
             }
-     
 
+            //загрузка age
+            int colIndex = 6;
+            for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+            {
+
+                dataGridView1.Rows[i].Cells[colIndex].Value = Age.ageList[i];
+            }
 
             //загрузка данных в dataGrid
 
@@ -235,14 +241,24 @@ namespace City_mend.Forms
                 Temperament print_random_temperament = (Temperament)random_temperament.Next(0, 3);
                 Meaning_of_life print_random_meaning_of_life = (Meaning_of_life)random_meaning_of_life.Next(0, 3);
 
+                /*    StreamWriter age_writer = new StreamWriter("C://Сохранения игры City-mend//" + "Save_residents_age.D&D");
+                    age_writer.WriteLine();
+                    age_writer.WriteLine(random_age.Next(6, 41));
+                    age_writer.Close();*/
+
+                
+               Age.ageList.Add(random_age.Next(6,41).ToString());
+                Age.Save_ageList();
+
                 dataGridView1.Rows.Add("", print_random_name, print_random_profession,
-               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%",
-               random_age.Next(63,91));
+               print_random_meaning_of_life, print_random_temperament, random_endurance.Next(0, 101) + "%"
+               );
                 int colIndex = 0;
+                int colIndex2 = 6;
                 for (int i = 0; i < dataGridView1.RowCount - 1; i++)
                 {
                     dataGridView1.Rows[i].Cells[colIndex].Value = i + 1;
-
+                    dataGridView1.Rows[i].Cells[colIndex2].Value = Age.ageList[i];
                 }
 
 
@@ -965,6 +981,18 @@ namespace City_mend.Forms
         private void button11_Click(object sender, EventArgs e)
         {
             contextMenuStrip10.Show(button11.Location);
+        }
+
+        private void timer_age_Tick(object sender, EventArgs e)
+        {
+            int colIndex = 6;
+            for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+            {
+            
+                dataGridView1.Rows[i].Cells[colIndex].Value = Age.ageList[i];
+            }
+            Age.Update();
+
         }
     }
 

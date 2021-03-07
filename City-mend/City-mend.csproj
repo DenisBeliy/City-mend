@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Create_Files.cs" />
+    <Compile Include="Create_game\Age.cs" />
     <Compile Include="Create_game\Create_LVL.cs" />
     <Compile Include="Create_game\Login_to_game.cs" />
     <Compile Include="Create_game\LVL_logics.cs" />

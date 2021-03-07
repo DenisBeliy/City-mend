@@ -13,9 +13,11 @@ namespace City_mend.Create_game
     {
         public static void Level_logics()
         {
+            Age.PlusAge();
             Draw();
             timerStart();
             Update();
+           
         }
 
         private static void Draw()
@@ -71,7 +73,7 @@ namespace City_mend.Create_game
             Create_LVL.money = Create_LVL.money + Create_LVL.residents * 1.531f;
 
 
-
+            
 
             Draw();
         
