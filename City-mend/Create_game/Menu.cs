@@ -40,19 +40,20 @@ namespace City_mend.Create_game
                        Thread.Sleep(700);*/
                 if (consoleKeyInfo.Key == ConsoleKey.D1)
                 {
-                    /* DirectoryInfo dirInfo = new DirectoryInfo("C:\\Сохранения игры City-mend\\");
+                    DirectoryInfo dirInfo = new DirectoryInfo("C:\\Сохранения игры City-mend\\");
 
-                     foreach (FileInfo file in dirInfo.GetFiles())
-                     {
-                         file.Delete();
-                     }
-                     Create_Files.Files();
-                     //*/
-
-                    Residents frm = new Residents();
-                    frm.ShowDialog();
+                    foreach (FileInfo file in dirInfo.GetFiles())
+                    {
+                        file.Delete();
+                    }
+                    Create_Files.Files();
                     
+                    //
 
+                    /* Residents frm = new Residents();
+                     frm.ShowDialog();*/
+
+               
 
                     break;
                 }

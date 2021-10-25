@@ -500,6 +500,7 @@ namespace City_mend.Forms
             // 
             // timerAge
             // 
+            this.timerAge.Enabled = true;
             this.timerAge.Interval = 3000;
             this.timerAge.Tick += new System.EventHandler(this.timerAge_Tick);
             // 
@@ -602,8 +603,6 @@ namespace City_mend.Forms
             // 
             // timer_age
             // 
-            this.timer_age.Enabled = true;
-            this.timer_age.Interval = 1000;
             this.timer_age.Tick += new System.EventHandler(this.timer_age_Tick);
             // 
             // Residents
@@ -661,7 +660,6 @@ namespace City_mend.Forms
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -714,5 +712,6 @@ namespace City_mend.Forms
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Timer timerAge;
         private System.Windows.Forms.Timer timer_age;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using City_mend.Forms;
 namespace City_mend.Create_game
 {
     class Age
@@ -82,6 +82,7 @@ namespace City_mend.Create_game
             {
                 
                 int b = int.Parse(ageList[i]);
+                Console.WriteLine();
                 if (b >random.Next(61,101))
                 {
                     timer1.Stop();
@@ -89,11 +90,11 @@ namespace City_mend.Create_game
                     if (dialog == DialogResult.OK)
                     {
                         ageList.RemoveAt(i);
-
+                        //
                         Save_ageList();
 
                         timer1.Start();
-                        Console.WriteLine();
+                        //Console.WriteLine();
                     }
                 
                 }

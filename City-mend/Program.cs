@@ -19,7 +19,8 @@ namespace City_mend
             Directory.CreateDirectory(@"C://Сохранения игры City-mend//" + "");
             Create_Files.Files();
             FullWindow();//открытие на весь экран
-            //Login_to_game.Welcome();//при входе в игру
+            Console.CursorVisible = false;
+            Login_to_game.Welcome();//при входе в игру
             Menu.Menu_create();
 
 

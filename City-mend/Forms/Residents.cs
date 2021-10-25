@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -571,9 +572,10 @@ namespace City_mend.Forms
                 timerAge.Start();
             }
         }
-
+       
         private void button4_Click(object sender, EventArgs e)
         {
+
             if (Create_LVL.money > 50)
             {
                 
@@ -986,12 +988,15 @@ namespace City_mend.Forms
         private void timer_age_Tick(object sender, EventArgs e)
         {
             int colIndex = 6;
-            for (int i = 0; i < dataGridView1.RowCount - 1; i++)
+            for (int i = 0; i < dataGridView1.RowCount - 2; i++)
             {
-            
-                dataGridView1.Rows[i].Cells[colIndex].Value = Age.ageList[i];
+                if (dataGridView1.ColumnCount >0)
+                {
+                    dataGridView1.Rows[i].Cells[colIndex].Value = Age.ageList[i];
+                }
+                
             }
-            Age.Update();
+            //Age.Update();
 
         }
     }

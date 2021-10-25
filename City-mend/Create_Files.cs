@@ -1,4 +1,5 @@
-﻿using System;
+﻿using City_mend.Create_game;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace City_mend
             Money();
             Residents_dataGrid();
             Residents_age();
+
         }
 
         private static void Residents()
